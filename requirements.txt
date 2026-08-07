@@ -2,3 +2,8 @@ openai
 python-dotenv
 jupyter
 ipykernel
+numpy
+pandas
+requests
+matplotlib
+scikit-learn
