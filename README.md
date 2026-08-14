@@ -12,27 +12,6 @@ Repositório das atividades desenvolvidas no programa de **Residência — Trilh
 - [Aula 04 — Estratégias de chunking para RAG](./AULA_04/README.md): conversão de 12 documentos, comparação de dez estratégias, embeddings locais e seleção experimental do melhor método.
 - [Aula 05 — Documents, metadados e busca vetorial](./AULA_05/README.md): criação de objetos `Document`, schema de metadados, vector store local e buscas semânticas com filtros.
 
-## Destaque da Aula 04
-
-A Aula 04 implementa o pipeline:
-
-```text
-PDF → Markdown → Chunking → Embeddings → JSON
-```
-
-Os dez testes de chunking foram comparados em três documentos. O método vencedor, `recursive_1000_overlap_100`, foi aplicado aos outros nove para economizar tokens e concluir o processamento sem exceder o limite encontrado na tentativa anterior.
-
-Resultado final:
-
-- 12 documentos processados;
-- 5.026 chunks com embeddings;
-- vetores locais de 384 dimensões;
-- nenhuma chamada paga para gerar os embeddings finais;
-- relatório com as 15 questões obrigatórias;
-- resultados organizados por documento e teste.
-
-Consulte a [documentação completa da Aula 04](./AULA_04/README.md) e o [relatório experimental](./AULA_04/results/RELATORIO.md).
-
 ## Conceitos trabalhados
 
 - consumo de modelos de linguagem por API;
