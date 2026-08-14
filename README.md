@@ -1,71 +1,68 @@
 # Residência — Trilhas em Tecnologias: IA Generativa & RAG
 
-Repositório destinado ao registro das atividades desenvolvidas durante o programa de **Residência — Trilhas em Tecnologias: IA Generativa & RAG**, do Instituto ECOA — PUC-Rio.
+Repositório das atividades desenvolvidas no programa de **Residência — Trilhas em Tecnologias: IA Generativa & RAG**, do Instituto ECOA — PUC-Rio.
 
 **Aluna:** Fernanda Fregulha
 
----
+## Aulas
 
-## 📚 Aulas
+- [Aula 01 — Introdução à IA](./AULA_01/README.md): configuração do ambiente e primeira interação com um modelo de linguagem por API.
+- [Aula 02 — Extração de metadados](./AULA_02/README.md): conversão de PDF para Markdown e extração estruturada de título, autores e ano.
+- [Aula 03 — Embeddings e busca semântica](./AULA_03/README.md): métricas de distância, comparação semântica e recuperação por linha, parágrafo e capítulo.
+- [Aula 04 — Estratégias de chunking para RAG](./AULA_04/README.md): conversão de 12 documentos, comparação de dez estratégias, embeddings locais e seleção experimental do melhor método.
 
-- [Aula 01 — Introdução à IA](./AULA_01/README.md) — Configuração do ambiente e primeira interação com um modelo de linguagem por meio de API.
+## Destaque da Aula 04
 
-- [Aula 02 — Extração de Metadados com Structured Outputs](./AULA_02/README.md) — Conversão de artigos científicos de PDF para Markdown e extração estruturada de metadados, como título, autores e ano.
+A Aula 04 implementa o pipeline:
 
-- [Aula 03 — Embeddings e Busca Semântica Manual](./AULA_03/README.md) — Implementação de métricas de distância entre embeddings, comparação semântica de termos e frases e busca por linha, parágrafo e capítulo.
+```text
+PDF → Markdown → Chunking → Embeddings → JSON
+```
 
-- [Aula 04 — Extração de PDF e Estratégias de Chunking](./AULA_04/README.md) — Conversão de artigos científicos para Markdown, avaliação da preservação de títulos, tabelas, fórmulas e imagens e comparação de dez estratégias de divisão de texto com LangChain.
+Os dez testes de chunking foram comparados em três documentos. O método vencedor, `recursive_1000_overlap_100`, foi aplicado aos outros nove para economizar tokens e concluir o processamento sem exceder o limite encontrado na tentativa anterior.
 
----
+Resultado final:
 
-## 🧩 Conceitos trabalhados
+- 12 documentos processados;
+- 5.026 chunks com embeddings;
+- vetores locais de 384 dimensões;
+- nenhuma chamada paga para gerar os embeddings finais;
+- relatório com as 15 questões obrigatórias;
+- resultados organizados por documento e teste.
 
-- Consumo de modelos de linguagem por API
-- Prompting e geração de texto
-- Structured Outputs
-- Extração de metadados
-- Conversão de PDF para Markdown
-- Embeddings
-- Distância euclidiana
-- Similaridade e distância de cosseno
-- Busca semântica manual
-- Chunking de documentos
-- Chunk size e chunk overlap
-- Divisão por parágrafo, sentença e seção
-- Separação recursiva de texto
-- Preparação de documentos para RAG
+Consulte a [documentação completa da Aula 04](./AULA_04/README.md) e o [relatório experimental](./AULA_04/results/RELATORIO.md).
 
----
+## Conceitos trabalhados
 
-## 🛠️ Tecnologias gerais
+- consumo de modelos de linguagem por API;
+- prompting e Structured Outputs;
+- extração de metadados;
+- conversão de PDF para Markdown;
+- embeddings e similaridade de cosseno;
+- busca semântica;
+- chunk size e chunk overlap;
+- divisão por caracteres, parágrafos, sentenças e headings;
+- separação recursiva;
+- preparação de documentos para RAG;
+- exportação de dados estruturados em JSON.
+
+## Tecnologias
 
 - Python
 - Jupyter Notebook
-- GroqCloud API
-- OpenRouter Embeddings API
+- Visual Studio Code
+- GroqCloud e OpenRouter
 - OpenAI Python SDK
 - Docling
 - LangChain Text Splitters
-- NumPy
-- Pandas
-- Requests
-- Matplotlib
-- Scikit-learn
+- Hugging Face Transformers
+- PyTorch
+- NumPy, Pandas, Matplotlib e Scikit-learn
 - python-dotenv
-- Virtual Environment (`venv`)
-- Visual Studio Code
 
-### APIs e modelos
+Na Aula 04, o chunking e os embeddings finais são executados localmente. O modelo `sentence-transformers/all-MiniLM-L6-v2` é armazenado em cache dentro da pasta da aula e não consome créditos do OpenRouter.
 
-A **GroqCloud API** foi utilizada nas atividades de geração de texto e Structured Outputs das Aulas 01 e 02.
-
-Na Aula 03, o **OpenRouter** foi utilizado para acessar um modelo específico de embeddings. Essa escolha foi necessária porque a Groq não disponibilizava um endpoint próprio para geração de embeddings utilizado na atividade.
-
-Na Aula 04, a conversão dos PDFs foi realizada localmente com o **Docling**, enquanto as estratégias de chunking foram implementadas com o pacote **LangChain Text Splitters**. A divisão dos documentos é uma operação local e não consome tokens de APIs de modelos de linguagem.
-
----
-
-## 📁 Estrutura do repositório
+## Estrutura do repositório
 
 ```text
 .
@@ -74,83 +71,64 @@ Na Aula 04, a conversão dos PDFs foi realizada localmente com o **Docling**, en
 ├── AULA_02/
 │   ├── README.md
 │   ├── converter.py
-│   ├── extrair_metadados.py
-│   └── arquivos da atividade
+│   └── extrair_metadados.py
 ├── AULA_03/
 │   ├── README.md
 │   └── atividade_embeddings.ipynb
 ├── AULA_04/
 │   ├── README.md
-│   ├── atividade_chunking.ipynb
 │   ├── converter.py
-│   ├── artigos em PDF
-│   └── documentos em Markdown
+│   ├── atividade_chunking.ipynb
+│   ├── documentos PDF e Markdown
+│   └── results/
+│       ├── RELATORIO.md
+│       ├── summary.json
+│       └── resultados por documento e teste
 ├── .env.example
 ├── .gitignore
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
-Cada pasta possui seu próprio README com a descrição da atividade, conceitos estudados, instruções de configuração, decisões técnicas e resultados obtidos.
+## Configuração
 
----
-
-## ⚙️ Configuração geral
-
-Clone o repositório e acesse sua pasta:
+Clone o repositório:
 
 ```bash
 git clone https://github.com/fregulha/Residencia-Trilhas-em-Tecnologias-IA-Generativa-RAG.git
 cd Residencia-Trilhas-em-Tecnologias-IA-Generativa-RAG
 ```
 
-Crie um ambiente virtual Python.
+Crie o ambiente virtual e instale as dependências.
 
-No Windows:
+Windows:
 
 ```powershell
 python -m venv venv
 venv\Scripts\Activate.ps1
+pip install -r requirements.txt
 ```
 
-No Linux ou macOS:
+Linux ou macOS:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-```
-
-Instale as dependências:
-
-```bash
 pip install -r requirements.txt
 ```
 
-As configurações específicas de APIs, modelos e execução estão documentadas dentro da pasta de cada aula.
+Cada pasta possui instruções específicas de execução em seu próprio README.
 
----
+## Segurança
 
-## 🔐 Segurança
+Chaves de API são armazenadas somente em arquivos `.env`, ignorados pelo Git. Nunca publique credenciais em notebooks, código ou documentação.
 
-As chaves de API são armazenadas localmente em arquivos `.env`, que não são versionados.
+O cache local do modelo da Aula 04 (`AULA_04/.hf_cache`) também é ignorado, pois pode ser baixado novamente quando necessário.
 
-O `.gitignore` está configurado para ignorar arquivos de ambiente em qualquer pasta do repositório:
-
-```gitignore
-.env
-.env.*
-!.env.example
-```
-
-Os arquivos `.env.example` podem demonstrar quais variáveis são necessárias, mas nunca devem conter credenciais reais.
-
-Nenhuma chave de API deve ser escrita diretamente no código, nos notebooks ou na documentação pública.
-
----
-
-## 📖 Referências
+## Referências
 
 - [LangChain — Text splitters](https://docs.langchain.com/oss/python/integrations/splitters)
+- [Hugging Face — embeddings](https://huggingface.co/blog/getting-started-with-embeddings)
 - [Docling — documentação oficial](https://docling-project.github.io/docling/)
 - [GroqCloud](https://console.groq.com/docs/overview)
 - [OpenRouter](https://openrouter.ai/docs)

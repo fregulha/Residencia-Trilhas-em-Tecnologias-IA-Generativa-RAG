@@ -1,0 +1,254 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "source_documents": {
+    "pdfs": 9,
+    "markdown": 12,
+    "drive_files_confirmed_by_author": true
+  },
+  "evaluation_documents": [
+    "bioetica_e_ia.md",
+    "escrita_academica_ia.md",
+    "twitter_algoritmo.md"
+  ],
+  "best_test_id": 9,
+  "best_strategy": "recursive_1000_overlap_100",
+  "method": "10 testes em 3 documentos; melhor estratégia nos 9 documentos restantes",
+  "scope_justification": "A tentativa de repetir os 10 testes em todos os documentos excedeu o limite de tokens. Para concluir a atividade com economia, os testes foram comparados nos mesmos 3 documentos e somente o método vencedor foi aplicado aos outros 9.",
+  "experiments": [
+    {
+      "test_id": 1,
+      "strategy": "fixed_200",
+      "num_chunks": 742,
+      "avg_chunk_size": 198.3585,
+      "min_chunk_size": 13,
+      "max_chunk_size": 200,
+      "avg_estimated_tokens": 49.6752,
+      "chunks_over_2000": 0,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.3492
+    },
+    {
+      "test_id": 2,
+      "strategy": "fixed_500",
+      "num_chunks": 298,
+      "avg_chunk_size": 494.5738,
+      "min_chunk_size": 63,
+      "max_chunk_size": 500,
+      "avg_estimated_tokens": 123.6812,
+      "chunks_over_2000": 0,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.6469
+    },
+    {
+      "test_id": 3,
+      "strategy": "fixed_1000",
+      "num_chunks": 150,
+      "avg_chunk_size": 984.6467,
+      "min_chunk_size": 213,
+      "max_chunk_size": 1000,
+      "avg_estimated_tokens": 246.26,
+      "chunks_over_2000": 0,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.7571
+    },
+    {
+      "test_id": 4,
+      "strategy": "fixed_2000",
+      "num_chunks": 76,
+      "avg_chunk_size": 1951.2895,
+      "min_chunk_size": 440,
+      "max_chunk_size": 2000,
+      "avg_estimated_tokens": 487.9211,
+      "chunks_over_2000": 0,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.4744
+    },
+    {
+      "test_id": 5,
+      "strategy": "fixed_500_overlap_50",
+      "num_chunks": 330,
+      "avg_chunk_size": 496.297,
+      "min_chunk_size": 156,
+      "max_chunk_size": 500,
+      "avg_estimated_tokens": 124.103,
+      "chunks_over_2000": 0,
+      "overlap_percent": 10.0,
+      "overlapping_chunks": 327,
+      "score": 0.637
+    },
+    {
+      "test_id": 6,
+      "strategy": "fixed_500_overlap_200",
+      "num_chunks": 494,
+      "avg_chunk_size": 496.9737,
+      "min_chunk_size": 156,
+      "max_chunk_size": 500,
+      "avg_estimated_tokens": 124.2773,
+      "chunks_over_2000": 0,
+      "overlap_percent": 40.0,
+      "overlapping_chunks": 491,
+      "score": 0.582
+    },
+    {
+      "test_id": 7,
+      "strategy": "paragraph",
+      "num_chunks": 447,
+      "avg_chunk_size": 329.8501,
+      "min_chunk_size": 1,
+      "max_chunk_size": 4291,
+      "avg_estimated_tokens": 82.5145,
+      "chunks_over_2000": 4,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.6121
+    },
+    {
+      "test_id": 8,
+      "strategy": "three_sentences",
+      "num_chunks": 378,
+      "avg_chunk_size": 389.6085,
+      "min_chunk_size": 5,
+      "max_chunk_size": 1668,
+      "avg_estimated_tokens": 97.3995,
+      "chunks_over_2000": 0,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.6874
+    },
+    {
+      "test_id": 9,
+      "strategy": "recursive_1000_overlap_100",
+      "num_chunks": 211,
+      "avg_chunk_size": 708.8436,
+      "min_chunk_size": 65,
+      "max_chunk_size": 996,
+      "avg_estimated_tokens": 177.1896,
+      "chunks_over_2000": 0,
+      "overlap_percent": 10.0,
+      "overlapping_chunks": 208,
+      "score": 1.0333
+    },
+    {
+      "test_id": 10,
+      "strategy": "markdown_headers",
+      "num_chunks": 67,
+      "avg_chunk_size": 2217.194,
+      "min_chunk_size": 10,
+      "max_chunk_size": 9877,
+      "avg_estimated_tokens": 554.2388,
+      "chunks_over_2000": 28,
+      "overlap_percent": 0.0,
+      "overlapping_chunks": 0,
+      "score": 0.6229
+    }
+  ],
+  "ranking": [
+    {
+      "test_id": 9,
+      "strategy": "recursive_1000_overlap_100",
+      "score": 1.0333
+    },
+    {
+      "test_id": 3,
+      "strategy": "fixed_1000",
+      "score": 0.7571
+    },
+    {
+      "test_id": 8,
+      "strategy": "three_sentences",
+      "score": 0.6874
+    },
+    {
+      "test_id": 2,
+      "strategy": "fixed_500",
+      "score": 0.6469
+    },
+    {
+      "test_id": 5,
+      "strategy": "fixed_500_overlap_50",
+      "score": 0.637
+    },
+    {
+      "test_id": 10,
+      "strategy": "markdown_headers",
+      "score": 0.6229
+    },
+    {
+      "test_id": 7,
+      "strategy": "paragraph",
+      "score": 0.6121
+    },
+    {
+      "test_id": 6,
+      "strategy": "fixed_500_overlap_200",
+      "score": 0.582
+    },
+    {
+      "test_id": 4,
+      "strategy": "fixed_2000",
+      "score": 0.4744
+    },
+    {
+      "test_id": 1,
+      "strategy": "fixed_200",
+      "score": 0.3492
+    }
+  ],
+  "vector_quality_checks": [
+    {
+      "test_id": 1,
+      "avg_adjacent_cosine": 0.4664,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 2,
+      "avg_adjacent_cosine": 0.569,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 3,
+      "avg_adjacent_cosine": 0.6819,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 4,
+      "avg_adjacent_cosine": 0.7858,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 5,
+      "avg_adjacent_cosine": 0.6195,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 6,
+      "avg_adjacent_cosine": 0.7299,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 7,
+      "avg_adjacent_cosine": 0.4036,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 8,
+      "avg_adjacent_cosine": 0.4734,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 9,
+      "avg_adjacent_cosine": 0.6039,
+      "avg_vector_norm": 1.0
+    },
+    {
+      "test_id": 10,
+      "avg_adjacent_cosine": 0.5695,
+      "avg_vector_norm": 1.0
+    }
+  ]
+}

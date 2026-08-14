@@ -6,6 +6,8 @@
 
 # Python
 __pycache__/
+.hf_cache/
+AULA_04/.hf_cache/
 *.py[cod]
 *$py.class
 *.so
