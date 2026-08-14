@@ -11,3 +11,6 @@ langchain-text-splitters
 docling
 torch
 transformers
+langchain-core
+langchain-huggingface
+sentence-transformers

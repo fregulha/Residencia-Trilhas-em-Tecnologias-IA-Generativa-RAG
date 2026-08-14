@@ -1,0 +1,220 @@
+{
+  "modelo_embedding": "sentence-transformers/all-MiniLM-L6-v2",
+  "tipo_vector_store": "InMemoryVectorStore",
+  "documentos_indexados": 180,
+  "fontes_representadas": 12,
+  "metodologia_economica": "Amostra estratificada de até 15 chunks do teste 09 por documento; embeddings locais e store em memória.",
+  "buscas": [
+    {
+      "consulta": "Como a recuperação de informações melhora respostas em sistemas RAG?",
+      "filtro": null,
+      "resultados": [
+        {
+          "posicao": 1,
+          "score": 0.577607,
+          "page_content": "Essa transformação da noção de informação é fundamental para compreender como seu impacto reestruturou a ideia sobre espaço público. Com o advento das Novas Tecnologias de Informação e Comunicação, há uma crise entre o processo autoral, que deve ser devida mente regulado e controlado, como forma de 'proteção ao autor', e a máxima de excluir da autoria o poder sobre a informação digital. Com essas mudanças, a informação ganha novos traços ao ser amplamente divulgada. Ela é ubíqua , pois pode estar em qualquer lugar do mundo, e, ao mesmo tempo, liberta do contexto de geração, opaca a toda referência à origem;  também  é anônima ,  pois  a  comunicação  de  um  a muitos, de forma industrializada, dissolve a categoria de autor; e é dependente ,  pois agora, antes das esferas institucionalizadas de discurso, são os códigos de instrumentos (softwares, interfaces) que condicionam as pragmáticas institucionais, antes soberanas em seu poder disciplinar (Malini, 2003, p. 164).",
+          "metadata": {
+            "fonte": "twitter_algoritmo.md",
+            "documento_id": "twitter_algoritmo",
+            "chunk_index": 28,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 981,
+            "chunk_id": "twitter_algoritmo_test09_chunk0028",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 245,
+            "caminho_origem": "AULA_04/results/twitter_algoritmo/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 2,
+          "score": 0.572526,
+          "page_content": "|              | 3. Apropriação e reescrita autoral         | Transformação e personalização do texto                        | Infundir a voz, pensamento e estilo do autor, ga- rantindo originalidade e evitando marcas algorít- micas. |\n| Pós- escrita | 4. Verificação rigorosa de fatos e fontes  | Validação independente de infor- mações                        | Assegurar a precisão factual, bibliográfica, lógica e ausência de plágio.                                  |\n|              | 5. Responsabilidade final e transparência  | Accountability e declaração de uso                             | Assumir responsabilidade integral pelo trabalho e declarar transparentemente o uso de IA.                  |",
+          "metadata": {
+            "fonte": "escrita_academica_ia.md",
+            "documento_id": "escrita_academica_ia",
+            "chunk_index": 13,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 707,
+            "chunk_id": "escrita_academica_ia_test09_chunk0013",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 177,
+            "caminho_origem": "AULA_04/results/escrita_academica_ia/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 3,
+          "score": 0.535729,
+          "page_content": "| Divulgação desne- cessária  | A IA atua em tarefas menores ou como parte de uma operação integrada que não gera conteúdo nem toma decisões de pesquisa. Para sugerir palavras ou frases que melhorem a clareza ou inteligibilidade de uma frase existente. Como parte de uma operação maior na qual a IA não está gerando ou sintetizando conteúdo nem tomando decisões de pesquisa (ex.: IA integrada a outros sistemas/máquinas). Como assistente digital (ex.: ajudar a organizar e manter ativos digitais e fluxos de trabalho de um projeto). |",
+          "metadata": {
+            "fonte": "escrita_academica_ia.md",
+            "documento_id": "escrita_academica_ia",
+            "chunk_index": 43,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 534,
+            "chunk_id": "escrita_academica_ia_test09_chunk0043",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 134,
+            "caminho_origem": "AULA_04/results/escrita_academica_ia/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        }
+      ]
+    },
+    {
+      "consulta": "Como a recuperação de informações melhora respostas em sistemas RAG?",
+      "filtro": {
+        "idioma": "pt"
+      },
+      "resultados": [
+        {
+          "posicao": 1,
+          "score": 0.577607,
+          "page_content": "Essa transformação da noção de informação é fundamental para compreender como seu impacto reestruturou a ideia sobre espaço público. Com o advento das Novas Tecnologias de Informação e Comunicação, há uma crise entre o processo autoral, que deve ser devida mente regulado e controlado, como forma de 'proteção ao autor', e a máxima de excluir da autoria o poder sobre a informação digital. Com essas mudanças, a informação ganha novos traços ao ser amplamente divulgada. Ela é ubíqua , pois pode estar em qualquer lugar do mundo, e, ao mesmo tempo, liberta do contexto de geração, opaca a toda referência à origem;  também  é anônima ,  pois  a  comunicação  de  um  a muitos, de forma industrializada, dissolve a categoria de autor; e é dependente ,  pois agora, antes das esferas institucionalizadas de discurso, são os códigos de instrumentos (softwares, interfaces) que condicionam as pragmáticas institucionais, antes soberanas em seu poder disciplinar (Malini, 2003, p. 164).",
+          "metadata": {
+            "fonte": "twitter_algoritmo.md",
+            "documento_id": "twitter_algoritmo",
+            "chunk_index": 28,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 981,
+            "chunk_id": "twitter_algoritmo_test09_chunk0028",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 245,
+            "caminho_origem": "AULA_04/results/twitter_algoritmo/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 2,
+          "score": 0.572526,
+          "page_content": "|              | 3. Apropriação e reescrita autoral         | Transformação e personalização do texto                        | Infundir a voz, pensamento e estilo do autor, ga- rantindo originalidade e evitando marcas algorít- micas. |\n| Pós- escrita | 4. Verificação rigorosa de fatos e fontes  | Validação independente de infor- mações                        | Assegurar a precisão factual, bibliográfica, lógica e ausência de plágio.                                  |\n|              | 5. Responsabilidade final e transparência  | Accountability e declaração de uso                             | Assumir responsabilidade integral pelo trabalho e declarar transparentemente o uso de IA.                  |",
+          "metadata": {
+            "fonte": "escrita_academica_ia.md",
+            "documento_id": "escrita_academica_ia",
+            "chunk_index": 13,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 707,
+            "chunk_id": "escrita_academica_ia_test09_chunk0013",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 177,
+            "caminho_origem": "AULA_04/results/escrita_academica_ia/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 3,
+          "score": 0.535729,
+          "page_content": "| Divulgação desne- cessária  | A IA atua em tarefas menores ou como parte de uma operação integrada que não gera conteúdo nem toma decisões de pesquisa. Para sugerir palavras ou frases que melhorem a clareza ou inteligibilidade de uma frase existente. Como parte de uma operação maior na qual a IA não está gerando ou sintetizando conteúdo nem tomando decisões de pesquisa (ex.: IA integrada a outros sistemas/máquinas). Como assistente digital (ex.: ajudar a organizar e manter ativos digitais e fluxos de trabalho de um projeto). |",
+          "metadata": {
+            "fonte": "escrita_academica_ia.md",
+            "documento_id": "escrita_academica_ia",
+            "chunk_index": 43,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 534,
+            "chunk_id": "escrita_academica_ia_test09_chunk0043",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 134,
+            "caminho_origem": "AULA_04/results/escrita_academica_ia/test_09/chunks_embeddings.json",
+            "idioma": "pt",
+            "tem_tabela": false
+          }
+        }
+      ]
+    },
+    {
+      "consulta": "Como mecanismos de atenção relacionam palavras em uma sequência?",
+      "filtro": {
+        "documento_id": "attention_is_all_you_need"
+      },
+      "resultados": [
+        {
+          "posicao": 1,
+          "score": 0.092989,
+          "page_content": "Provided proper attribution is provided, Google hereby grants permission to reproduce the tables and figures in this paper solely for use in journalistic or scholarly works.\n\n## Attention Is All You Need\n\nAshish Vaswani ∗ Google Brain avaswani@google.com Noam Shazeer ∗ Google Brain noam@google.com\n\nLlion Jones ∗ Google Research llion@google.com Niki Parmar ∗ Google Research nikip@google.com Aidan N. Gomez ∗ † University of Toronto aidan@cs.toronto.edu Jakob Uszkoreit ∗ Google Research usz@google.com Łukasz Kaiser ∗ Google Brain lukaszkaiser@google.com Illia Polosukhin ∗ ‡\n\nillia.polosukhin@gmail.com\n\n## Abstract",
+          "metadata": {
+            "fonte": "attention_is_all_you_need.md",
+            "documento_id": "attention_is_all_you_need",
+            "chunk_index": 1,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 619,
+            "chunk_id": "attention_is_all_you_need_test09_chunk0001",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 155,
+            "caminho_origem": "AULA_04/results/attention_is_all_you_need/test_09/chunks_embeddings.json",
+            "idioma": "en",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 2,
+          "score": 0.04305,
+          "page_content": "| (B)  |                                           |                                           |                                           |                                           | 32                                        |                                           |                                           |                                           |               |        5.01 |         25.4 |              60 |\n|      | 2                                         |                                           |                                           |                                           |                                           |                                           |                                           |                                           |               |        6.11 |         23.7 |              36 |",
+          "metadata": {
+            "fonte": "attention_is_all_you_need.md",
+            "documento_id": "attention_is_all_you_need",
+            "chunk_index": 42,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 847,
+            "chunk_id": "attention_is_all_you_need_test09_chunk0042",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 212,
+            "caminho_origem": "AULA_04/results/attention_is_all_you_need/test_09/chunks_embeddings.json",
+            "idioma": "en",
+            "tem_tabela": false
+          }
+        },
+        {
+          "posicao": 3,
+          "score": 0.037982,
+          "page_content": "| (D)  |                                           |                                           |                                           |                                           |                                           |                                           |                                           | 0.0                                       |               |        4.67 |         25.3 |                 |\n|      |                                           |                                           |                                           |                                           |                                           |                                           |                                           | 0.2                                       |               |        5.47 |         25.7 |                 |",
+          "metadata": {
+            "fonte": "attention_is_all_you_need.md",
+            "documento_id": "attention_is_all_you_need",
+            "chunk_index": 47,
+            "estrategia": "recursive_1000_overlap_100",
+            "chunk_size": 1000.0,
+            "chunk_overlap": 100,
+            "n_caracteres": 847,
+            "chunk_id": "attention_is_all_you_need_test09_chunk0047",
+            "secao": null,
+            "pagina": null,
+            "n_tokens_estimados": 212,
+            "caminho_origem": "AULA_04/results/attention_is_all_you_need/test_09/chunks_embeddings.json",
+            "idioma": "en",
+            "tem_tabela": false
+          }
+        }
+      ]
+    }
+  ]
+}

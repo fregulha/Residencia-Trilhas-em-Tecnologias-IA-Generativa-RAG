@@ -10,6 +10,7 @@ Repositório das atividades desenvolvidas no programa de **Residência — Trilh
 - [Aula 02 — Extração de metadados](./AULA_02/README.md): conversão de PDF para Markdown e extração estruturada de título, autores e ano.
 - [Aula 03 — Embeddings e busca semântica](./AULA_03/README.md): métricas de distância, comparação semântica e recuperação por linha, parágrafo e capítulo.
 - [Aula 04 — Estratégias de chunking para RAG](./AULA_04/README.md): conversão de 12 documentos, comparação de dez estratégias, embeddings locais e seleção experimental do melhor método.
+- [Aula 05 — Documents, metadados e busca vetorial](./AULA_05/README.md): criação de objetos `Document`, schema de metadados, vector store local e buscas semânticas com filtros.
 
 ## Destaque da Aula 04
 
@@ -84,6 +85,11 @@ Na Aula 04, o chunking e os embeddings finais são executados localmente. O mode
 │       ├── RELATORIO.md
 │       ├── summary.json
 │       └── resultados por documento e teste
+├── AULA_05/
+│   ├── README.md
+│   ├── atividade_documents_metadados.ipynb
+│   └── results/
+│       └── buscas_exemplo.json
 ├── .env.example
 ├── .gitignore
 ├── requirements.txt
@@ -115,6 +121,12 @@ Linux ou macOS:
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+Para sair do ambiente virtual, em qualquer sistema operacional, execute:
+
+```bash
+deactivate
 ```
 
 Cada pasta possui instruções específicas de execução em seu próprio README.
